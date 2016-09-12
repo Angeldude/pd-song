@@ -1,0 +1,10 @@
+{
+  "name": "embedded-pd",
+  "version": "0.0.1",
+  "description": "app for embedding pd patches",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.8.8"
+  },
+  "author": "angel vanegas"
+}
