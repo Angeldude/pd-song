@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/webpd.min.js"></script>
+    <title>OK!</title>
+  </head>
+  <body>
+
+    <h2>Let's hear it!</h2>
+    <button id="borton" type="button" name="button">STOP</button>
+    <script type="text/javascript">
+      var patch;
+      $.get('patches/poor.pd', function(patchStr){
+        patch = Pd.loadPatch(patchStr);
+        Pd.start();
+      })
+
+      var toot = $('#borton');
+      toot.click(function(){
+        if(Pd.isStarted()){
+        Pd.stop();
+      } else {
+        Pd.start();
+      }
+      })
+    </script>
+  </body>
+</html>
