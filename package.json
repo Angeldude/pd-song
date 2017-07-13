@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "app for embedding pd patches",
   "main": "server.js",
+  "engines": {
+    "node": "8.1.4"
+  },
   "dependencies": {
     "express": "~4.8.8"
   },
